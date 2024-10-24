@@ -11,6 +11,7 @@ from qdrant_client import QdrantClient
 from langchain.prompts import PromptTemplate
 from dotenv import load_dotenv
 from streamlit_chat import message
+import time 
 
 # Set page configuration
 st.set_page_config(
@@ -136,11 +137,16 @@ if choice == "🤖 Chatbot":
 
     if user_question:
         # Generate response
+        start_time = time.time()
         with st.spinner("Thinking...!"):
             try:
                 result = qa_chain({"question": user_question})
                 answer = result["answer"]
                 st.session_state.chat_history.append((user_question, answer))
+                response_time = time.time() - start_time
+
+                # Display the response time
+                st.markdown(f"<div><strong>Response Time:</strong> {response_time:.2f} seconds</div>", unsafe_allow_html=True)
             except Exception as e:
                 st.error(f"An error occurred: {str(e)}")
                 answer = "I'm sorry, but I couldn't process your request."
