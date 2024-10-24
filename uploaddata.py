@@ -58,7 +58,7 @@ def process_pdfs(uploaded_files):
         embedding=HuggingFaceEmbeddings(model_name='BAAI/bge-small-en-v1.5'),
         url=qdrant_url,
         api_key=qdrant_api_key,
-        collection_name="custom-chatbot",
+        collection_name="custom_agent-2",
         force_recreate=True
     )
 
