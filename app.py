@@ -69,7 +69,7 @@ embeddings_model = HuggingFaceEmbeddings(model_name='BAAI/bge-small-en-v1.5')
 # Initialize vector store from existing collection
 vectorstore = Qdrant(
     client=qdrant_client,
-    collection_name="custom-chatbot",
+    collection_name="custom_agent-2",
     embeddings=embeddings_model,
 )
 
