@@ -24,8 +24,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Load environment variables
-qdrant_url = "https://a5f67368-c552-456c-8b15-7425996937f7.us-east4-0.gcp.cloud.qdrant.io:6333"
-qdrant_api_key = "W8inj707x2hCZfvE3dH5byI9uh02eEJXFLlDRU2LT18QPyuYaaG-Fg"
+qdrant_url = "https://fefb1c85-6465-4013-ac35-937a3dc7acae.eastus-0.azure.cloud.qdrant.io:6333"
+qdrant_api_key = "Q-7DPiZWi4xCHr42qkTZH8mwuu626H5uzx9BvQMuR2gkcSr9hibFrA"
 
 warnings.filterwarnings("ignore")
 
